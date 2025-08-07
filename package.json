@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "test": "jest --verbose --coverage"
+  },
+
+  "devDependencies": {
+    "jest": "^30.0.5"
+  }
+}
