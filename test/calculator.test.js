@@ -27,3 +27,23 @@ test("Subtract an equal number", () => {
 test("Subtract a larger number", () => {
   expect(calculator.subtract(244, 987)).toBe(-743);
 });
+
+test("Multiply by 0", () => {
+  expect(calculator.multiply(123, 0)).toBe(0);
+});
+
+test("Multiply by 1", () => {
+  expect(calculator.multiply(1, 321)).toBe(321);
+});
+
+test("Multiply two positive numbers", () => {
+  expect(calculator.multiply(42, 10)).toBe(420);
+});
+
+test("Multiply a positive number by a negative", () => {
+  expect(calculator.multiply(7, -3)).toBe(-21);
+});
+
+test("Multiply two negative numbers", () => {
+  expect(calculator.multiply(-77, -2)).toBe(154);
+});
