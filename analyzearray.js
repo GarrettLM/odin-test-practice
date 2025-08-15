@@ -4,13 +4,19 @@ function analyzeMin(array) {
   });
 }
 
+function analyzeMax(array) {
+  return array.reduce((max, current) => {
+    return (max < current) ? current : max;
+  });
+}
+
 function analyze(array) {
   return {
     min: analyzeMin(array),
-    max: 0,
+    max: analyzeMax(array),
     average: 0,
     length: 0
   };
 }
 
-module.exports = { analyze, analyzeMin };
+module.exports = { analyze, analyzeMin, analyzeMax };
