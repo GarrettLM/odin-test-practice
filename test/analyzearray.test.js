@@ -1,7 +1,7 @@
 const analyzeArray = require("../analyzearray");
 
-test("Analyze min [1,8,3,4,2,6]", () => {
-    expect(analyzeArray.analyzeMin([1,8,3,4,2,6])).toBe(1);
+test("Analyze min [2,8,3,4,1,6]", () => {
+    expect(analyzeArray.analyzeMin([2,8,3,4,1,6])).toBe(1);
 });
 
 test("Analyze max [1,8,3,4,2,6]", () => {

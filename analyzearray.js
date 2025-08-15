@@ -10,12 +10,19 @@ function analyzeMax(array) {
   });
 }
 
+function analyzeAverage(array) {
+  let total = array.reduce((total, current) => {
+    return total + current;
+  }, 0);
+  return total / array.length;
+}
+
 function analyze(array) {
   return {
     min: analyzeMin(array),
     max: analyzeMax(array),
-    average: 0,
-    length: 0
+    average: analyzeAverage(array),
+    length: array.length,
   };
 }
 
