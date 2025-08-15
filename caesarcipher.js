@@ -1,6 +1,7 @@
 function encrypt(plaintext, key) {
   let cipherText = plaintext.split("").map(letter => {
-    return String.fromCharCode(letter.charCodeAt(0) + key);
+    return (letter.match("[^a-z]") && letter.match("[^A-Z]")) ? letter
+     : String.fromCharCode(letter.charCodeAt(0) + key);
   }).join("");
 
   return cipherText;
