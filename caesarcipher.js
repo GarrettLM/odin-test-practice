@@ -7,4 +7,10 @@ function encrypt(plaintext, key) {
   return cipherText;
 }
 
-module.exports = { encrypt };
+function decrypt(cipherText, key) {
+  let plainText = cipherText;
+
+  return plainText;
+}
+
+module.exports = { encrypt, decrypt };
