@@ -1,9 +1,16 @@
 function analyzeMin(array) {
-  return 0;
+  return array.reduce((min, current) => {
+    return (min > current) ? current : min;
+  });
 }
 
 function analyze(array) {
-  return { min: 0, max: 0, average: 0, length: 0 };
+  return {
+    min: analyzeMin(array),
+    max: 0,
+    average: 0,
+    length: 0
+  };
 }
 
 module.exports = { analyze, analyzeMin };
