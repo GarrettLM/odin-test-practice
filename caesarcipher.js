@@ -8,7 +8,10 @@ function encrypt(plaintext, key) {
 }
 
 function decrypt(cipherText, key) {
-  let plainText = cipherText;
+  let plainText = cipherText.split("").map(letter => {
+    return (letter.match("[^a-z]") && letter.match("[^A-Z]")) ? letter
+     : String.fromCharCode(letter.charCodeAt(0) - key);
+  }).join("");
 
   return plainText;
 }
